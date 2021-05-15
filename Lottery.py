@@ -4,13 +4,30 @@
 #LICENSE file in the root directory of this source tree. 
 
 file1 = open('biglietti.txt', 'r')
+prize = open('premi.txt', 'r')
 
 import secrets
 import linecache
 
 nr = 0
 n = 0
-p = ["Bici", "Tv", "Orologio", "Auricolare"]
+p = []
+
+
+#Il ciclo importa i premi dal file premi.txt
+while True:
+    
+    #Legge la riga successiva nel file
+    line1= prize.readline()
+
+    # Se è vuota si chiude il ciclo e smette di contare
+    if not line1:
+
+        break
+        
+    #altrimenti aggiunge il premio trovato all'elenco dei premi da sorteggiare
+    else:
+        p.append(line1)
 
 #il ciclo conta le righe nel file
 while True:
@@ -51,3 +68,4 @@ for c in p:
     #linecache.getline('biglietti.txt', nr) legge la riga nr nel file biglietti.txt
  
 file1.close()
+prize.close()
