@@ -1,6 +1,6 @@
 # Lottery
 
 
-The Python script picks winning tickets from a txt file and associates it with given prizes
+The Python script imports prizes and tickets from two .txt files and picks winning tickets, associating them with prizes.
 
-Variables, comments are written in italian
+Variables and comments mostly are written in italian
